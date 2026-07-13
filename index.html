@@ -1,0 +1,1162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <title>Psychological Service - Choise</title>
+</head>
+
+<body class="bg-white overflow-x-hidden">
+    <div id="navBackdrop"
+        class="fixed inset-0 z-40 bg-gray-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out md:hidden">
+    </div>
+
+    <nav id="mainNav"
+        class="bg-white absolute z-50 group w-full h-24 md:h-auto px-6 py-4 transition-all duration-500 ease-in-out overflow-hidden [&.open]:h-[450px] md:[&.open]:h-auto max-md:[&.nav-sticky]:fixed max-md:[&.nav-sticky]:top-0 max-md:[&.nav-sticky]:left-0 max-md:[&.nav-sticky]:shadow-[0_4px_20px_rgba(0,0,0,0.08)] max-md:[&.nav-sticky]:bg-white/95 max-md:[&.nav-sticky]:backdrop-blur-md">
+        <div class="max-w-screen mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="flex items-center justify-between w-full md:w-auto">
+                <div class="shrink-0 flex items-center h-full">
+                    <img src="assets/images/logo-2.png" alt="Logo" class="h-20 w-auto object-contain" />
+                </div>
+
+                <button id="menuToggleBtn"
+                    class="cursor-pointer flex md:hidden relative w-12 h-12 justify-center items-center rounded-md focus:outline-none">
+                    <div class="relative w-7 h-4">
+                        <span
+                            class="absolute top-0 left-0 w-full h-0.5 bg-slate-800 transition-all duration-300 ease-in-out group-[.open]:top-2 group-[.open]:rotate-45"></span>
+                        <span
+                            class="absolute top-2 left-0 w-full h-0.5 bg-slate-800 transition-all duration-300 ease-in-out group-[.open]:opacity-0 group-[.open]:w-0"></span>
+                        <span
+                            class="absolute top-4 left-0 w-full h-0.5 bg-slate-800 transition-all duration-300 ease-in-out group-[.open]:top-2 group-[.open]:-rotate-45"></span>
+                    </div>
+                </button>
+            </div>
+
+            <div class="hidden group-[.open]:flex md:flex flex-col md:flex-row items-center gap-6 w-auto mt-4 md:mt-0">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <a href="#" class="text-md font-semibold text-gray-800 hover:text-[#ffdc59]">Home</a>
+                    <a href="#" class="text-md font-semibold text-gray-800 hover:text-[#ffdc59]">Our Works</a>
+                    <a href="#" class="text-md font-semibold text-gray-800 hover:text-[#ffdc59]">Why Choose Us</a>
+                    <a href="#" class="text-md font-semibold text-gray-800 hover:text-[#ffdc59]">Services</a>
+                    <a href="#" class="text-md font-semibold text-gray-800 hover:text-[#ffdc59]">Contact</a>
+                </div>
+
+                <a href="#"
+                    class="cursor-pointer relative z-10 flex items-center justify-center gap-2 px-4 py-2 mx-auto overflow-hidden text-lg border-2 border-gray-50 rounded-full bg-gray-50 backdrop-blur-md lg:font-medium font-semibold text-gray-800 before:absolute before:-z-10 before:aspect-square before:w-full before:-left-full before:rounded-full before:bg-[#ffdc59] before:transition-all before:duration-700 hover:before:left-0 hover:before:w-full hover:before:scale-150 hover:[&_svg]:rotate-90 hover:[&_svg]:bg-gray-50 hover:[&_svg]:border-transparent">
+                    Explore
+
+                    <svg class="w-8 h-8 p-2 duration-300 ease-linear font-semibold border-gray-800 rounded-full rotate-45 text-gray-50"
+                        viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                            class="fill-gray-800 transition-colors duration-300"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="heroSection"
+        class="relative w-full min-h-screen py-36 px-6 md:px-10 md:pt-[13%] justify-between flex md:flex-row flex-col overflow-hidden">
+        <div class="items-start flex flex-col md:gap-10 gap-14 w-full h-full mt-5">
+            <div>
+                <h2 class="font-extrabold text-gray-800 text-4xl md:text-5xl leading-tight">
+                    Memaksimalkan Potensi SDM
+                    <!-- <span class="m-auto text-[#ffdc59]">People</span> -->
+                </h2>
+                <h2 class="font-extrabold text-gray-800 text-4xl md:text-5xl leading-tight">
+                    untuk Hasil yang Lebih Baik
+                    <!-- <span class="m-auto text-[#ffdc59]">Performance</span> -->
+                </h2>
+
+                <div class="w-[80%] md:w-[78%] pl-1 mt-6">
+                    <h4 class="text-gray-800 font-light text-xl">
+                        Dari rekrutmen, assessment hingga pengembangan SDM, kami membantu
+                        Anda dalam membangun individu yang lebih siap, produktif, dan
+                        bertumbuh.
+                    </h4>
+                </div>
+            </div>
+            <div class="">
+                <div class="relative inline-flex items-center justify-center gap-4 group">
+                    <div
+                        class="absolute inset-0 duration-1000 opacity-60 transition-all rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200">
+                    </div>
+                    <a role="button"
+                        class="group relative inline-flex items-center justify-center text-base rounded-xl bg-gray-900 px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
+                        title="" href="#">
+                        Mulai Sekarang
+                        <svg aria-hidden="true" viewBox="0 0 10 10" height="10" width="10" fill="none"
+                            class="mt-0.5 ml-2 -mr-1 stroke-white stroke-2">
+                            <path d="M0 5h7" class="transition opacity-0 group-hover:opacity-100"></path>
+                            <path d="M1 1l4 4-4 4" class="transition group-hover:translate-x-0.75"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="md:pt-0 pt-20">
+            <div class="w-full md:w-100 h-90">
+                <img src="assets/images/hero_image.svg" alt="hero image" class="object-cover h-full" srcset="" />
+            </div>
+        </div>
+
+        <div id="scrollIndicator"
+            class="absolute md:flex bottom-10 left-1/2 -translate-x-1/2 hidden flex-col items-center gap-2 z-50 transition-all duration-500 ease-in-out opacity-100 translate-y-0">
+            <div class="animate-bounce flex flex-col items-center relative">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="text-gray-800 relative z-10">
+                    <polyline points="7 6 12 11 17 6"></polyline>
+                    <polyline points="7 13 12 18 17 13"></polyline>
+                </svg>
+            </div>
+            <span class="text-gray-800 text-[10px] font-bold tracking-widest uppercase">SCROLL DOWN TO REVEAL
+                MORE</span>
+        </div>
+    </section>
+
+    <div class="flex flex-col md:flex-row w-full items-start gap-9 justify-between px-6 md:px-10 pb-10 overflow-hidden">
+        <div class="flex flex-col gap-3 shrink-0">
+            <div class="w-50 bg-[#ffdc59] rounded-md">
+                <h1 class="ml-3 font-extrabold text-gray-800 text-5xl">Our Works</h1>
+            </div>
+            <div class="w-full md:w-132 mt-2">
+                <h4 class="text-gray-800 font-light text-base">
+                   Dalam 5 tahun terakhir, Chaakra telah mendampingi perusahaan, institusi pendidikan, organisasi pemerintahan, dan bisnis keluarga untuk lebih siap dalam dalam menghadapi tantangan tren SDM, kepemimpinan, serta update dalam menangani berbagai masalah lintas generasi
+                </h4>
+                <h4 class="text-gray-800 font-light text-base pt-0.5">
+                    Setiap program Chaakra dirancang berdasarkan kebutuhan nyata dan
+                    didukung pendekatan psikologi, asesmen, dan juga pengembangan bisnis
+                    yang terukur.
+                </h4>
+            </div>
+        </div>
+
+        <!-- Aggregate section -->
+        <div class="grid grid-cols-2 gap-y-8 gap-x-8 md:gap-x-16 sm:mt-0 mt-10 md:pr-12">
+            <div class="flex flex-col">
+                <div class="w-20 bg-[#fcd752] rounded-md">
+                    <h2 class="text-5xl md:text-6xl font-extrabold text-[#1a1a1a] tracking-tight mb-2 pl-2">
+                        5k+
+                    </h2>
+                </div>
+                <div class="w-50 h-10">
+                    <p class="text-sm md:text-base text-gray-400 font-medium">
+                        Total Peserta Rekrutmen Tertangani
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col">
+                <div class="w-20 bg-[#fcd752] rounded-md">
+                    <h2 class="text-5xl md:text-6xl font-extrabold text-[#1a1a1a] tracking-tight mb-2 pl-2">
+                        50+
+                    </h2>
+                </div>
+                <div class="w-40 h-10">
+                    <p class="text-sm md:text-base text-gray-400 font-medium">
+                        Psikologi yang Terafiliasi
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="w-20 bg-[#fcd752] rounded-md">
+                    <h2 class="text-5xl md:text-6xl font-extrabold text-[#1a1a1a] tracking-tight mb-2 pl-2">
+                        2k+
+                    </h2>
+                </div>
+                <div class="w-40 h-10">
+                    <p class="text-sm md:text-base text-gray-400 font-medium">
+                       Pembuatan & Penyusunan Kontrak Kerja Perusahaan
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col ">
+                <div class="w-20 bg-[#fcd752] rounded-md">
+                    <h2 class="text-5xl md:text-6xl font-extrabold text-[#1a1a1a] tracking-tight mb-2 pl-2">
+                        20+
+                    </h2>
+                </div>
+                <div class="w-50 h-10">
+                    <p class="text-sm md:text-base text-gray-400 font-medium">
+                        Alat tes Psikologi ter-update
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col col-span-2 md:pl-[57%]">
+                <div class="w-20 bg-[#fcd752] rounded-md">
+                    <h2 class="text-5xl md:text-6xl font-extrabold text-[#1a1a1a] tracking-tight mb-2 pl-2">
+                        20+
+                    </h2>
+                </div>
+                <div class="w-40 h-10">
+                    <p class="text-sm md:text-base text-gray-400 font-medium">
+                        Perusahaan yang bekerja sama dalam hal rekrutmen
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-full py-20 md:py-36 px-4 md:px-10 overflow-hidden">
+        <h2 class="text-center font-extrabold text-3xl md:text-4xl text-gray-800 mb-10">
+            Chaakra's Psychologist Associate
+        </h2>
+
+        <img src="assets/images/map-dot.svg" class="w-full md:scale-100" srcset="" />
+    </div>
+
+    <section class="py-16">
+        <div class="max-w-full mx-auto px-6 text-center">
+            <!-- The Hook -->
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                Kami menyelesaikan masalah anda
+            </h2>
+
+            <div class="max-w-7xl mx-auto px-6 py-12 font-sans">
+                <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <div
+                        class="bg-[#eccb53] rounded-[24px] p-8 flex flex-col justify-between text-white shadow-sm min-h-[200px] md:min-h-[250px]">
+                        <h2 class="text-3xl md:text-5xl xl:text-4xl font-light tracking-tight mb-6 md:mb-8 break-words">
+                            Masalah
+                        </h2>
+                        <p class="text-[14px] opacity-90 leading-relaxed max-w-full md:max-w-[90%]">
+                            Masalah yang sering dihadapi oleh perusahaan
+                        </p>
+                    </div>
+
+                    <div class="bg-[#f4f5f7] rounded-[24px] p-6 flex flex-col gap-5 shadow-sm text-left">
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-7 h-7 rounded-full bg-[#195A41] flex items-center justify-center text-white shrink-0">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div
+                                class="bg-white px-3 py-1 rounded-full text-[13px] font-medium text-gray-700 shadow-sm">
+                                Masalah #1
+                            </div>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-[15px] font-medium text-gray-800 underline decoration-gray-300 decoration-2 underline-offset-4 mb-2">
+                                Sulit menemukan Kandidat yang Tepat
+                            </h3>
+                            <p class="text-[13.5px] text-gray-600 leading-relaxed">
+                                Tidak semua kandidat yang memenuhi kualifikasi memiliki
+                                karakter dan nilai yang sesuai dengan budaya perusahaan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#f4f5f7] rounded-[24px] p-6 flex flex-col gap-5 shadow-sm text-left">
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-7 h-7 rounded-full bg-[#BE2D53] flex items-center justify-center text-white shrink-0">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div
+                                class="bg-white px-3 py-1 rounded-full text-[13px] font-medium text-gray-700 shadow-sm">
+                                Masalah #2
+                            </div>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-[15px] font-medium text-gray-800 underline decoration-gray-300 decoration-2 underline-offset-4 mb-2">
+                                Proses Seleksi Memakan Waktu
+                            </h3>
+                            <p class="text-[13.5px] text-gray-600 leading-relaxed">
+                                Penyaringan kandidat hingga proses wawancara sering menyita
+                                waktu dan mengurangi fokus pada prioritas bisnis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#f4f5f7] rounded-[24px] p-6 flex flex-col gap-5 shadow-sm text-left">
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="w-7 h-7 rounded-full bg-[#91B59C] flex items-center justify-center text-white shrink-0">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div
+                                class="bg-white px-3 py-1 rounded-full text-[13px] font-medium text-gray-700 shadow-sm">
+                                Masalah #3
+                            </div>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-[15px] font-medium text-gray-800 underline decoration-gray-300 decoration-2 underline-offset-4 mb-2">
+                                Khawatir Salah Merekrut
+                            </h3>
+                            <p class="text-[13.5px] text-gray-600 leading-relaxed">
+                                Keputusan rekrutmen yang kurang tepat dapat berdampak pada
+                                produktivitas tim, biaya operasional, dan kinerja organisasi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Pivot -->
+            <div class="px-6 md:px-0 mt-4 md:mt-0">
+                <button
+                    class="max-md:w-full bg-[#dab636] cursor-pointer text-white px-8 py-4 md:py-3 max-md:rounded-md rounded-md font-semibold hover:bg-[#eccb53] transition">
+                    Lihat Bagaimana Kami Membantu Anda
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full max-w-7xl mx-auto py-20 md:py-36 px-6 md:px-10 font-sans mb-20 h-auto overflow-hidden">
+        <div class="max-w-md relative z-20 mb-20 lg:mb-12">
+            <p class="text-[#ffdc59] text-xs font-bold tracking-wider uppercase mb-3">
+                Why Choose Us? /
+            </p>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight mb-5">
+                Kami memiliki tim yang
+                <span class="text-[#ffdc59]">berpengalaman</span><br />
+            </h2>
+        </div>
+
+        <div class="relative w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 lg:block lg:h-[400px]">
+            <svg class="hidden lg:block absolute inset-0 w-full h-full z-0" viewBox="0 0 1000 400"
+                preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M -50,380 C 50,380 75,320 150,320 C 265,320 265,240 380,240 C 495,240 495,160 610,160 C 725,160 725,80 840,80 C 915,80 950,20 1050,20"
+                    fill="none" stroke="#ffdc59" stroke-width="3" stroke-linecap="round" />
+            </svg>
+
+            <div
+                class="relative z-10 w-full lg:absolute lg:left-[15%] lg:top-[80%] lg:w-64 lg:-translate-x-2 lg:-translate-y-2">
+                <div class="hidden lg:block w-4 h-4 bg-gray-300 rounded-full ring-8 ring-white shadow-sm relative z-20">
+                </div>
+
+                <div class="relative pt-2 lg:pt-6">
+                    <div
+                        class="absolute -top-10 -left-2 lg:-top-16 lg:-left-6 text-[7rem] lg:text-[9rem] font-black text-gray-100 leading-none -z-10 select-none">
+                        1
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">
+                        Human Insight-Based Approach
+                    </h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Setiap solusi dirancang berdasarkan pemahaman mendalam terhadap
+                        individu, tim, dan dinamika organisasi.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="relative z-10 w-full lg:absolute lg:left-[38%] lg:top-[60%] lg:w-64 lg:-translate-x-2 lg:-translate-y-2">
+                <div class="hidden lg:block w-4 h-4 bg-gray-300 rounded-full ring-8 ring-white shadow-sm relative z-20">
+                </div>
+
+                <div class="relative pt-2 lg:pt-6">
+                    <div
+                        class="absolute -top-10 -left-2 lg:-top-16 lg:-left-6 text-[7rem] lg:text-[9rem] font-black text-gray-100 leading-none -z-10 select-none">
+                        2
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">
+                        Data-Driven, Not Assumption
+                    </h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Rekomendasi yang kami berikan didukung oleh asesmen, observasi,
+                        dan analisis kebutuhan yang terukur, sehingga solusi yang
+                        dihasilkan lebih relevan, tepat sasaran, dan berdampak nyata.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="relative z-10 w-full lg:absolute lg:left-[61%] lg:top-[40%] lg:w-64 lg:-translate-x-2 lg:-translate-y-2">
+                <div class="hidden lg:block w-4 h-4 bg-gray-300 rounded-full ring-8 ring-white shadow-sm relative z-20">
+                </div>
+
+                <div class="relative pt-2 lg:pt-6">
+                    <div
+                        class="absolute -top-10 -left-2 lg:-top-16 lg:-left-6 text-[7rem] lg:text-[9rem] font-black text-gray-100 leading-none -z-10 select-none">
+                        3
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">
+                        End-to-End Development Partner
+                    </h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Mulai dari asesmen, konsultasi, pelatihan, hingga pendampingan
+                        implementasi, kami hadir sebagai mitra yang mendampingi proses
+                        perubahan secara menyeluruh, bukan hanya penyedia pelatihan
+                        sesaat.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="relative z-10 w-full lg:absolute lg:left-[84%] lg:top-[20%] lg:w-64 lg:-translate-x-2 lg:-translate-y-2">
+                <div class="hidden lg:block w-4 h-4 bg-gray-300 rounded-full ring-8 ring-white shadow-sm relative z-20">
+                </div>
+
+                <div class="relative pt-2 lg:pt-6">
+                    <div
+                        class="absolute -top-10 -left-2 lg:-top-16 lg:-left-6 text-[7rem] lg:text-[9rem] font-black text-gray-100 leading-none -z-10 select-none">
+                        4
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">
+                        Practical & Actionable Solutions
+                    </h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Setiap program dirancang agar mudah diterapkan dalam konteks nyata
+                        organisasi. Fokus kami bukan hanya menambah wawasan, tetapi
+                        membantu menciptakan perubahan perilaku dan peningkatan kinerja.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- services section -->
+    <div class="flex flex-col w-full items-start gap-16 px-6 md:px-10 min-h-screen pb-7 overflow-hidden">
+        <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+            <div class="bg-[#ffdc59] rounded-md inline-block">
+                <h1 class="ml-3 mr-3 font-extrabold text-gray-800 text-4xl md:text-5xl whitespace-nowrap">
+                    Our Services
+                </h1>
+            </div>
+            <div class="w-full md:w-130 pl-1 md:mt-2">
+                <h4 class="text-gray-800 font-light text-base">
+                    Konsultan Psikologi &amp; Pengembangan Organisasi Berpengalaman
+                    Lebih Dari 10 Tahun.
+                </h4>
+            </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
+            <!-- Card 1 -->
+            <div
+                class="w-full max-w-150 border-b-6 border-t-2 border-x-2 border-gray-800 rounded-4xl p-8 flex flex-col justify-between min-h-60 relative overflow-hidden shadow-xl">
+                <div class="relative z-10 md:max-w-[65%] max-w-[55%]">
+                    <h2 class="text-[20px] font-bold leading-tight">
+                        <span class="box-decoration-clone bg-[#ffdc59] text-gray-800 px-2.5 py-0.5 rounded-sm">
+                            Psikotes & Assessment Kompetensi Pegawai
+                        </span>
+                    </h2>
+                </div>
+
+                <div class="relative mt-12">
+                    <a href="#" class="inline-flex items-center gap-3 group">
+                        <div
+                            class="transition-all group-hover:rotate-45 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 ease-in-out duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </div>
+                        <span
+                            class="text-gray-800 group-hover:font-bold transition-colors text-sm font-semibold tracking-wide">
+                            Pelajari Selengkapnya
+                        </span>
+                    </a>
+                </div>
+
+                <div class="absolute right-6 top-1/2 -translate-y-1/2 w-[160px] pointer-events-none select-none">
+                    <svg class="drop-shadow-md" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="15" width="110" height="65" rx="4" fill="white" />
+                        <path d="M5 19C5 16.7909 6.79086 15 9 15H111C113.209 15 115 16.7909 115 19V25H5V19Z"
+                            fill="#f3f4f6" />
+                        <circle cx="12" cy="20" r="1.5" fill="#d1d5db" />
+                        <circle cx="18" cy="20" r="1.5" fill="#d1d5db" />
+                        <circle cx="24" cy="20" r="1.5" fill="#d1d5db" />
+
+                        <!-- Assessment/Checklist Icon -->
+                        <rect x="75" y="35" width="24" height="32" rx="2" stroke="#d1d5db" stroke-width="1.5"
+                            fill="none" />
+                        <path d="M82 45 h 10 M82 52 h 10" stroke="#d1d5db" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M78 45 l 1 1 l 2 -2 M78 52 l 1 1 l 2 -2" stroke="#4b5563" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+
+                        <!-- Cursor Element -->
+                        <path d="M42 37 L39 34 M50 35 L52 32 M35 44 L32 43 M37 53 L34 56" stroke="#d1d5db"
+                            stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M42 40 L52 65 L57 56 L67 66 L71 62 L61 52 L70 48 Z" fill="#1c1c1c" stroke="white"
+                            stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="w-full max-w-150 border-b-6 border-t-2 border-x-2 border border-gray-800 rounded-4xl p-8 flex flex-col justify-between min-h-60 relative overflow-hidden shadow-xl">
+                <div class="relative z-10 max-w-[55%]">
+                    <h2 class="text-[20px] font-bold leading-tight">
+                        <span class="box-decoration-clone bg-[#ffdc59] text-gray-800 px-2.5 py-0.5 rounded-sm">
+                            Talent Test Persiapan Karier & Jurusan Sekolah
+                        </span>
+                    </h2>
+                </div>
+
+                <div class="relative mt-12">
+                    <a href="#" class="inline-flex items-center gap-3 group">
+                        <div
+                            class="transition-all group-hover:rotate-45 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 ease-in-out duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </div>
+                        <span
+                            class="text-gray-800 group-hover:font-bold transition-colors text-sm font-semibold tracking-wide">
+                            Pelajari Selengkapnya
+                        </span>
+                    </a>
+                </div>
+
+                <div class="absolute right-6 top-1/2 -translate-y-1/2 w-[160px] pointer-events-none select-none">
+                    <svg class="drop-shadow-md" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="15" width="110" height="65" rx="4" fill="white" />
+                        <path d="M5 19C5 16.7909 6.79086 15 9 15H111C113.209 15 115 16.7909 115 19V25H5V19Z"
+                            fill="#f3f4f6" />
+                        <circle cx="12" cy="20" r="1.5" fill="#d1d5db" />
+                        <circle cx="18" cy="20" r="1.5" fill="#d1d5db" />
+                        <circle cx="24" cy="20" r="1.5" fill="#d1d5db" />
+
+                        <!-- Strategy Pawn Icon -->
+                        <path d="M87 37 a 5 5 0 1 0 0 10 a 5 5 0 1 0 0 -10" stroke="#4b5563" stroke-width="1.5"
+                            fill="none" />
+                        <path d="M84 47 l -4 14 h 14 l -4 -14" stroke="#d1d5db" stroke-width="1.5" fill="none"
+                            stroke-linejoin="round" />
+                        <path d="M76 61 h 22" stroke="#4b5563" stroke-width="1.5" stroke-linecap="round" />
+
+                        <!-- Cursor Element -->
+                        <path d="M42 37 L39 34 M50 35 L52 32 M35 44 L32 43 M37 53 L34 56" stroke="#d1d5db"
+                            stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M42 40 L52 65 L57 56 L67 66 L71 62 L61 52 L70 48 Z" fill="#1c1c1c" stroke="white"
+                            stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="w-full max-w-150 border-b-6 border-t-2 border-x-2 border border-gray-800 rounded-4xl p-8 flex flex-col justify-between min-h-60 relative overflow-hidden shadow-xl">
+                <div class="relative z-10 max-w-[55%]">
+                    <h2 class="text-[20px] font-bold leading-tight">
+                        <span class="box-decoration-clone bg-[#ffdc59] text-gray-800 px-2.5 py-0.5 rounded-sm">
+                            Program Pelatihan & Pembimbingan Dunia Kerja / Sekolah
+                        </span>
+                    </h2>
+                </div>
+
+                <div class="relative mt-12">
+                    <a href="#" class="inline-flex items-center gap-3 group">
+                        <div
+                            class="transition-all group-hover:rotate-45 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 ease-in-out duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </div>
+                        <span
+                            class="text-gray-800 group-hover:font-bold transition-colors text-sm font-semibold tracking-wide">
+                            Pelajari Selengkapnya
+                        </span>
+                    </a>
+                </div>
+
+                <div class="absolute right-6 top-1/2 -translate-y-1/2 w-[160px] pointer-events-none select-none">
+                    <svg class="drop-shadow-md" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="15" width="110" height="65" rx="4" fill="white" />
+                        <path d="M5 19C5 16.7909 6.79086 15 9 15H111C113.209 15 115 16.7909 115 19V25H5V19Z"
+                            fill="#f3f4f6" />
+                        <circle cx="12" cy="20" r="1.5" fill="#d1d5db" />
+                        <circle cx="18" cy="20" r="1.5" fill="#d1d5db" />
+                        <circle cx="24" cy="20" r="1.5" fill="#d1d5db" />
+
+                        <!-- Growth Chart Icon -->
+                        <rect x="75" y="52" width="6" height="12" rx="1" fill="#d1d5db" />
+                        <rect x="85" y="42" width="6" height="22" rx="1" fill="#9ca3af" />
+                        <rect x="95" y="32" width="6" height="32" rx="1" fill="#4b5563" />
+                        <path d="M72 48 L85 35 L95 40 L105 28" stroke="#10b981" stroke-width="1.5" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M100 28 h 5 v 5" stroke="#10b981" stroke-width="1.5" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round" />
+
+                        <!-- Cursor Element -->
+                        <path d="M42 37 L39 34 M50 35 L52 32 M35 44 L32 43 M37 53 L34 56" stroke="#d1d5db"
+                            stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M42 40 L52 65 L57 56 L67 66 L71 62 L61 52 L70 48 Z" fill="#1c1c1c" stroke="white"
+                            stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+                class="w-full max-w-150 border-b-6 border-t-2 border-x-2 border-gray-800 rounded-4xl p-8 flex flex-col justify-between min-h-60 relative overflow-hidden shadow-xl">
+                <div class="relative z-10 max-w-[55%] md:max-w-[65%]">
+                    <h2 class="text-[20px] font-bold leading-tight">
+                        <span class="box-decoration-clone bg-[#ffdc59] text-gray-800 px-2.5 py-0.5 rounded-sm">
+                            Tes Potensi Akademik (TPA) Persiapan Perguruan Tinggi, CPNS &
+                            Kedinasan
+                        </span>
+                    </h2>
+                </div>
+
+                <div class="relative mt-12">
+                    <a href="#" class="inline-flex items-center gap-3 group">
+                        <div
+                            class="transition-all group-hover:rotate-45 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 ease-in-out duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </div>
+                        <span
+                            class="text-gray-800 group-hover:font-bold transition-colors text-sm font-semibold tracking-wide">
+                            Pelajari Selengkapnya
+                        </span>
+                    </a>
+                </div>
+
+                <div class="absolute right-6 top-1/2 -translate-y-1/2 w-[160px] pointer-events-none select-none">
+                    <svg class="drop-shadow-md" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="15" width="110" height="65" rx="4" fill="white" />
+                        <path d="M5 19C5 16.7909 6.79086 15 9 15H111C113.209 15 115 16.7909 115 19V25H5V19Z"
+                            fill="#f3f4f6" />
+                        <circle cx="12" cy="20" r="1.5" fill="#d1d5db" />
+                        <circle cx="18" cy="20" r="1.5" fill="#d1d5db" />
+                        <circle cx="24" cy="20" r="1.5" fill="#d1d5db" />
+
+                        <!-- Graduation Cap Icon -->
+                        <path d="M72 42 l 16 -8 l 16 8 l -16 8 z" stroke="#4b5563" stroke-width="1.5" fill="none"
+                            stroke-linejoin="round" />
+                        <path d="M78 45 v 8 c 0 5 20 5 20 0 v -8" stroke="#d1d5db" stroke-width="1.5" fill="none" />
+                        <path d="M104 42 v 12" stroke="#4b5563" stroke-width="1.5" fill="none" />
+                        <circle cx="104" cy="55" r="1.5" fill="#4b5563" />
+
+                        <!-- Cursor Element -->
+                        <path d="M42 37 L39 34 M50 35 L52 32 M35 44 L32 43 M37 53 L34 56" stroke="#d1d5db"
+                            stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M42 40 L52 65 L57 56 L67 66 L71 62 L61 52 L70 48 Z" fill="#1c1c1c" stroke="white"
+                            stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Clients Section -->
+    <section class="w-full max-w-7xl mx-auto py-24 px-6 md:px-10 font-sans bg-white overflow-hidden">
+        <div class="flex flex-col items-center mb-16">
+            <div class="w-full flex items-center justify-center gap-6 mb-8">
+                <div class="w-80 bg-[#ffdc59] rounded-md flex items-center justify-center py-3">
+                    <h1 class="m-0 font-extrabold text-gray-800 text-5xl text-center">
+                        Our Clients
+                    </h1>
+                </div>
+            </div>
+
+            <p class="text-gray-600 text-center max-w-3xl text-sm md:text-[15px] leading-relaxed">
+                Kami telah dipercaya oleh berbagai instansi dan perusahaan untuk
+                mendampingi perjalanan mereka dalam mengembangkan potensi sumber daya
+                manusia dan mengoptimalkan kinerja organisasi secara profesional.
+            </p>
+        </div>
+
+        <!-- Marquee Wrapper -->
+        <div class="marquee-container relative w-full overflow-hidden flex items-center">
+            <!-- Marquee Track -->
+            <div class="animate-marquee flex items-center">
+                <!-- --- FIRST SET OF LOGOS --- -->
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/Wilmar_International_Logo.svg.webp" alt="Wilmar International"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/BSI.png" alt="BSI"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/logo_bri.png" alt="BRI"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/BTN.png" alt="BTN"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/Japfa.webp" alt="Japfa"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/Additon.png" alt="Additon"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/Bapeda_Sidoarjo.png" alt="Bapeda Sidoarjo"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/bpjs.png" alt="BPJS"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/citicon.png" alt="Citicon"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/CRA.png" alt="CRA"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/Eka_Ormed.png" alt="Eka Ormed"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/indns_pwr.png" alt="Indonesia Power"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/jatim_grha_utama.png" alt="Jatim Grha Utama"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/Logo_Terminal_Petikemas_Surabaya.png"
+                        alt="Terminal Peti Kemas Surabaya"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/pegadaian.png" alt="Pegadaian"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/pelindo.png" alt="Pelindo"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/sucofindo-logo-png_seeklogo-293069.png" alt="Sucofindo"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/properindoenvirotech.png" alt="PT PET"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/Wira Jatim.png" alt="Wira Jatim"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/Sun Flower.png" alt="Sun Flower"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/logo_pt_satona.png" alt="Satona"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/ITS-Tekno-Sains.png" alt="ITS Tekno Sains"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+                <div
+                    class="flex-shrink-0 flex items-center justify-center p-4 w-48 md:w-64 h-32 md:h-40 rounded-2xl mx-2">
+                    <img src="assets/images/clients/kai.webp" alt="KAI"
+                        class="max-h-16 md:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="w-full max-w-7xl mx-auto py-24 px-6 md:px-10 font-sans bg-white overflow-hidden">
+        <div class="flex flex-col items-center mb-16">
+            <div class="w-full flex items-center justify-center gap-6 mb-8">
+                <div class="w-90 bg-[#ffdc59] rounded-md flex items-center justify-center py-3">
+                    <h1 class="m-0 font-extrabold text-gray-800 text-5xl text-center">
+                        Our Campus Partners
+                    </h1>
+                </div>
+            </div>
+
+            <p class="text-gray-600 text-center max-w-3xl text-sm md:text-[15px] leading-relaxed">
+                Kami telah dipercaya oleh berbagai instansi dan perusahaan untuk
+                mendampingi perjalanan mereka dalam mengembangkan potensi sumber daya
+                manusia dan mengoptimalkan kinerja organisasi secara profesional.
+            </p>
+        </div>
+
+        <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 lg:gap-14 max-w-6xl mx-auto place-items-center w-full">
+            <div class="flex items-center justify-center p-6 w-full h-40 md:h-56 rounded-2xl">
+                <img src="assets/images/clients/Unair.png" alt="Unair"
+                    class="max-h-20 md:max-h-32 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+            </div>
+
+            <div class="flex items-center justify-center p-6 w-full h-40 md:h-56 rounded-2xl">
+                <img src="assets/images/clients/ups_sby.png" alt="UPS Surabaya"
+                    class="max-h-20 md:max-h-32 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+            </div>
+            <div class="flex items-center justify-center p-6 w-full h-40 md:h-56 rounded-2xl">
+                <img src="assets/images/clients/UWKS.png" alt="UWKS"
+                    class="max-h-20 md:max-h-32 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+            </div>
+            <div class="flex items-center justify-center p-6 w-full h-40 md:h-56 rounded-2xl">
+                <img src="assets/images/clients/poliwangi.webp" alt="Jatim Prasarana"
+                    class="max-h-20 md:max-h-32 w-auto object-contain grayscale hover:grayscale-0 transition-opacity" />
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="bg-[#1a1a1a] pt-16 pb-8 font-sans text-sm relative overflow-hidden text-gray-300">
+        <!-- Main Container -->
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <!-- Top Grid Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+                <!-- Column 1: Brand & Description -->
+                <div class="flex flex-col gap-6">
+                    <!-- Logo Mockup -->
+                    <div class="flex items-center gap-2">
+                        <span class="text-3xl font-bold tracking-tight text-white">
+                            <span class="text-[#ffdc59] font-normal">Chaakra</span>
+                        </span>
+                    </div>
+                    <p class="leading-relaxed text-gray-400">
+                        Kami membantu Anda dalam membangun individu yang lebih siap,
+                        produktif, dan bertumbuh melalui pendekatan psikologi dan
+                        pengembangan organisasi.
+                    </p>
+                    <div class="flex items-center gap-4 mt-2">
+                        <img src="assets/images/hmpsi.png" alt="HMPSI"
+                            class="h-12 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
+                        <img src="assets/images/bnsp.png" alt="BNSP"
+                            class="h-12 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
+                    </div>
+                </div>
+
+                <!-- Column 2: Useful Links -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Useful
+                        Links
+                    </h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="https://chaakra-consulting.com/" target="_blank"
+                                class="text-gray-400 hover:text-[#ffdc59] transition-colors duration-300 hover:translate-x-1 inline-block">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://chaakra-consulting.com/about-us/" target="_blank"
+                                class="text-gray-400 hover:text-[#ffdc59] transition-colors duration-300 hover:translate-x-1 inline-block">About
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="https://chaakra-consulting.com/services/" target="_blank"
+                                class="text-gray-400 hover:text-[#ffdc59] transition-colors duration-300 hover:translate-x-1 inline-block">Our
+                                Services</a>
+                        </li>
+                        <li>
+                            <a href="https://chaakra-consulting.com/article/" target="_blank"
+                                class="text-gray-400 hover:text-[#ffdc59] transition-colors duration-300 hover:translate-x-1 inline-block">Blog</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Contact Us
+                    </h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#ffdc59] shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="leading-relaxed">Pondok Indah Karah A-1 <br />Surabaya, East
+                                Java,<br />Indonesia</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[#ffdc59] shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                            <span>+62 856 4820 0701</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[#ffdc59] shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <a href="mailto:info@chaakra-consulting.com"
+                                class="hover:text-[#ffdc59] transition-colors">info@chaakra-consulting.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Socials -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Follow Us
+                    </h3>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-[#ffdc59] hover:text-gray-900 transition-all duration-300 hover:-translate-y-1"
+                            aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-[#ffdc59] hover:text-gray-900 transition-all duration-300 hover:-translate-y-1"
+                            aria-label="Twitter">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-[#ffdc59] hover:text-gray-900 transition-all duration-300 hover:-translate-y-1"
+                            aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-[#ffdc59] hover:text-gray-900 transition-all duration-300 hover:-translate-y-1"
+                            aria-label="LinkedIn">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <h3 class="text-white font-bold text-lg mt-10 mb-6 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-[#ffdc59] rounded-full"></span> Our Other
+                        Service
+                    </h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="https://choise.chaakra-consulting.com/" target="_blank"
+                                class="text-gray-400 hover:text-[#ffdc59] transition-colors duration-300 hover:translate-x-1 inline-block">Choise</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-400 text-sm text-center md:text-left">
+                    © 2025 part of
+                    <a href="https://chaakra-consulting.com/" target="_blank"
+                        class="text-[#ffdc59] hover:text-[#ffdc59] transition-colors">Chaakra Consulting</a>
+                    . All rights reserved.
+                </p>
+                <div class="flex flex-wrap justify-center gap-6 text-sm">
+                    <a href="#" class="text-gray-400 hover:text-[#ffdc59] transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-[#ffdc59] transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-[#ffdc59] transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Action Button -->
+    <a id="whatsappFab" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp" title="Chat via WhatsApp"
+        class="fixed bottom-7 right-7 z-[9999] w-15 h-15 rounded-full flex items-center justify-center no-underline shadow-lg transition-transform duration-300 group fab-entrance"
+        style="
+        background-color: #25d366;
+        box-shadow:
+          0 6px 24px rgba(37, 211, 102, 0.45),
+          0 2px 8px rgba(0, 0, 0, 0.15);
+      " onmouseover="
+        this.style.transform = 'scale(1.12)';
+        this.style.boxShadow =
+          '0 10px 32px rgba(37,211,102,0.55), 0 4px 12px rgba(0,0,0,0.18)';
+        document
+          .getElementById('waTooltip')
+          .classList.remove('opacity-0', 'translate-x-2');
+        document
+          .getElementById('waTooltip')
+          .classList.add('opacity-100', 'translate-x-0');
+      " onmouseout="
+        this.style.transform = 'scale(1)';
+        this.style.boxShadow =
+          '0 6px 24px rgba(37,211,102,0.45), 0 2px 8px rgba(0,0,0,0.15)';
+        document
+          .getElementById('waTooltip')
+          .classList.remove('opacity-100', 'translate-x-0');
+        document
+          .getElementById('waTooltip')
+          .classList.add('opacity-0', 'translate-x-2');
+      ">
+        <!-- Pulse ring -->
+        <span class="absolute inset-0 rounded-full opacity-40 pointer-events-none wa-pulse"
+            style="background-color: #25d366"></span>
+
+        <!-- WhatsApp SVG icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="white"
+            class="relative z-10">
+            <path
+                d="M16 2C8.268 2 2 8.268 2 16c0 2.493.655 4.833 1.8 6.856L2 30l7.338-1.775A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.84-1.6l-.418-.248-4.354 1.053 1.082-4.24-.272-.435A11.455 11.455 0 0 1 4.5 16C4.5 9.649 9.649 4.5 16 4.5S27.5 9.649 27.5 16 22.351 27.5 16 27.5zm6.29-8.61c-.345-.172-2.04-1.006-2.356-1.12-.316-.115-.546-.172-.776.172-.23.345-.89 1.12-1.09 1.35-.2.23-.4.258-.745.086-.345-.172-1.457-.537-2.775-1.712-1.025-.915-1.717-2.045-1.918-2.39-.2-.345-.021-.532.15-.703.155-.155.345-.403.517-.604.172-.2.23-.345.345-.575.115-.23.057-.431-.029-.604-.086-.172-.776-1.87-1.063-2.562-.28-.672-.563-.58-.776-.591l-.66-.011c-.23 0-.603.086-.919.431-.316.345-1.207 1.178-1.207 2.872s1.236 3.33 1.408 3.56c.172.23 2.432 3.71 5.893 5.205.824.356 1.468.569 1.969.728.827.263 1.58.226 2.175.137.663-.1 2.04-.834 2.328-1.638.287-.805.287-1.495.2-1.638-.086-.144-.316-.23-.66-.403z" />
+        </svg>
+
+        <!-- Tooltip -->
+        <span id="waTooltip"
+            class="absolute right-[calc(100%+12px)] top-1/2 -translate-y-1/2 translate-x-2 bg-gray-900 text-white text-[13px] font-semibold whitespace-nowrap px-3 py-1.5 rounded-lg opacity-0 pointer-events-none transition-all duration-200 shadow-md font-[Montserrat,sans-serif]">
+            Chat via WhatsApp
+        </span>
+    </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const track = document.getElementById("marquee-track");
+            track.innerHTML += track.innerHTML;
+        });
+        document.addEventListener("scroll", function () {
+            const indicator = document.getElementById("scrollIndicator");
+            const heroSection = document.getElementById("heroSection");
+
+            // Fades out when you scroll past 15% of the first section's height
+            const triggerPoint = heroSection.offsetHeight * 0.15;
+
+            if (window.scrollY > triggerPoint) {
+                // Fade out and shift slightly up when leaving
+                indicator.classList.remove("opacity-100", "translate-y-0");
+                indicator.classList.add(
+                    "opacity-0",
+                    "-translate-y-4",
+                    "pointer-events-none",
+                );
+            } else {
+                // Fade back in when at the top
+                indicator.classList.add("opacity-100", "translate-y-0");
+                indicator.classList.remove(
+                    "opacity-0",
+                    "-translate-y-4",
+                    "pointer-events-none",
+                );
+            }
+        });
+
+        // --- NEW NAVBAR AND BACKDROP LOGIC ---
+        const mainNav = document.getElementById("mainNav");
+        const menuToggleBtn = document.getElementById("menuToggleBtn");
+        const navBackdrop = document.getElementById("navBackdrop");
+
+        // Function to open/close menu and toggle backdrop visibility
+        function toggleMenu() {
+            const isOpen = mainNav.classList.toggle("open");
+
+            if (isOpen) {
+                // Show Backdrop
+                navBackdrop.classList.remove("opacity-0", "pointer-events-none");
+                navBackdrop.classList.add("opacity-100", "pointer-events-auto");
+            } else {
+                // Hide Backdrop
+                navBackdrop.classList.remove("opacity-100", "pointer-events-auto");
+                navBackdrop.classList.add("opacity-0", "pointer-events-none");
+            }
+        }
+
+        // Click event on hamburger menu
+        menuToggleBtn.addEventListener("click", toggleMenu);
+
+        // Click event to close the menu if clicking outside of the navbar (or on the backdrop)
+        document.addEventListener("click", (event) => {
+            const isClickInsideNav = mainNav.contains(event.target);
+            const isClickOnToggle = menuToggleBtn.contains(event.target);
+            const isMenuOpen = mainNav.classList.contains("open");
+
+            if (isMenuOpen && !isClickInsideNav && !isClickOnToggle) {
+                toggleMenu(); // This will close it and trigger the backdrop to fade away
+            }
+        });
+
+        // --- MOBILE-ONLY STICKY NAVBAR ON SCROLL ---
+        function handleNavSticky() {
+            const isMobile = window.innerWidth < 768;
+            if (isMobile) {
+                if (window.scrollY > 10) {
+                    mainNav.classList.add("nav-sticky");
+                } else {
+                    mainNav.classList.remove("nav-sticky");
+                }
+            } else {
+                // Always remove sticky class on desktop/tablet
+                mainNav.classList.remove("nav-sticky");
+            }
+        }
+
+        window.addEventListener("scroll", handleNavSticky, { passive: true });
+        window.addEventListener("resize", handleNavSticky);
+    </script>
+</body>
+
+</html>
