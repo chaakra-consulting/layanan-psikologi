@@ -3,7 +3,7 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+    --font-sans: "Montserrat", "Clash Display", ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-slate-50: oklch(98.4% 0.003 247.858);
@@ -71,7 +71,6 @@
     --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 0.12);
-    --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --animate-bounce: bounce 1s infinite;
     --blur-xs: 4px;
@@ -248,9 +247,6 @@
   .relative {
     position: relative;
   }
-  .sticky {
-    position: sticky;
-  }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
@@ -377,9 +373,6 @@
   .m-545\.5 {
     margin: calc(var(--spacing) * 545.5);
   }
-  .m-auto {
-    margin: auto;
-  }
   .mx-2 {
     margin-inline: calc(var(--spacing) * 2);
   }
@@ -409,9 +402,6 @@
   }
   .-mr-1 {
     margin-right: calc(var(--spacing) * -1);
-  }
-  .mr-3 {
-    margin-right: calc(var(--spacing) * 3);
   }
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
@@ -530,9 +520,6 @@
   .min-h-60 {
     min-height: calc(var(--spacing) * 60);
   }
-  .min-h-\[200px\] {
-    min-height: 200px;
-  }
   .min-h-\[350px\] {
     min-height: 350px;
   }
@@ -586,9 +573,6 @@
   }
   .w-90 {
     width: calc(var(--spacing) * 90);
-  }
-  .w-103 {
-    width: calc(var(--spacing) * 103);
   }
   .w-\[80\%\] {
     width: 80%;
@@ -852,9 +836,6 @@
   .bg-\[\#dab636\] {
     background-color: #dab636;
   }
-  .bg-\[\#eccb53\] {
-    background-color: #eccb53;
-  }
   .bg-\[\#f4f5f7\] {
     background-color: #f4f5f7;
   }
@@ -1012,9 +993,6 @@
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
   }
-  .pb-10 {
-    padding-bottom: calc(var(--spacing) * 10);
-  }
   .pb-15 {
     padding-bottom: calc(var(--spacing) * 15);
   }
@@ -1083,9 +1061,6 @@
   .text-\[13px\] {
     font-size: 13px;
   }
-  .text-\[14px\] {
-    font-size: 14px;
-  }
   .text-\[15px\] {
     font-size: 15px;
   }
@@ -1147,9 +1122,6 @@
   .tracking-widest {
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
-  }
-  .break-words {
-    overflow-wrap: break-word;
   }
   .whitespace-nowrap {
     white-space: nowrap;
@@ -1228,9 +1200,6 @@
   }
   .opacity-70 {
     opacity: 70%;
-  }
-  .opacity-90 {
-    opacity: 90%;
   }
   .opacity-100 {
     opacity: 100%;
@@ -1645,11 +1614,6 @@
       margin-top: calc(var(--spacing) * 2);
     }
   }
-  .md\:mb-8 {
-    @media (width >= 48rem) {
-      margin-bottom: calc(var(--spacing) * 8);
-    }
-  }
   .md\:flex {
     @media (width >= 48rem) {
       display: flex;
@@ -1683,11 +1647,6 @@
   .md\:max-h-32 {
     @media (width >= 48rem) {
       max-height: calc(var(--spacing) * 32);
-    }
-  }
-  .md\:min-h-\[250px\] {
-    @media (width >= 48rem) {
-      min-height: 250px;
     }
   }
   .md\:w-64 {
@@ -1728,11 +1687,6 @@
   .md\:max-w-\[65\%\] {
     @media (width >= 48rem) {
       max-width: 65%;
-    }
-  }
-  .md\:max-w-\[90\%\] {
-    @media (width >= 48rem) {
-      max-width: 90%;
     }
   }
   .md\:translate-y-0 {
@@ -2003,12 +1957,6 @@
       font-weight: var(--font-weight-medium);
     }
   }
-  .xl\:text-4xl {
-    @media (width >= 80rem) {
-      font-size: var(--text-4xl);
-      line-height: var(--tw-leading, var(--text-4xl--line-height));
-    }
-  }
   .group-hover\:translate-x-0\.75 {
     .group:hover & {
       --tw-translate-x: calc(var(--spacing) * 0.75);
@@ -2145,6 +2093,48 @@
       }
     }
   }
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Extralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 @layer utilities {
   @keyframes waPulse {

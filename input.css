@@ -1,13 +1,63 @@
 @import "tailwindcss";
 
-@custom-variant hover (&:hover);
-@custom-variant group-hover (.group:hover &);
-@theme {
-  /* This completely overrides the default font-sans utility */
-  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Extralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* ── WhatsApp FAB animations ── */
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@custom-variant hover (&:hover);
+@custom-variant group-hover (.group:hover &);
+
+@theme {
+  --font-sans: "Montserrat", "Clash Display", ui-sans-serif, system-ui, sans-serif;
+}
+
+
 @layer utilities {
   @keyframes waPulse {
     0% {
@@ -43,6 +93,8 @@
     animation: fabEntrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   }
 }
+
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -51,12 +103,14 @@
     transform: translateX(-50%);
   }
 }
+
 .animate-marquee {
   display: flex;
   width: max-content;
   animation: marquee 30s linear infinite;
 }
-/* Optional: Pause the animation when hovered */
+
+
 .marquee-container:hover .animate-marquee {
   animation-play-state: paused;
 }
