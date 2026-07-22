@@ -18,6 +18,19 @@
 </head>
 
 <body class="bg-white overflow-x-hidden">
+    <!-- Page Loader -->
+    <div id="page-loader"
+        class="fixed inset-0 z-[99999] bg-white flex items-center justify-center transition-opacity duration-500">
+        <!-- <div class="loadingspinner">
+            <div id="square1"></div>
+            <div id="square2"></div>
+            <div id="square3"></div>
+            <div id="square4"></div>
+            <div id="square5"></div>
+        </div> -->
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-gray-800 border-t-[#ffdc59]"></div>
+    </div>
+
     <div id="navBackdrop"
         class="fixed inset-0 z-40 bg-gray-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out md:hidden">
     </div>
@@ -106,7 +119,7 @@
         </div>
         <div class="md:pt-0 pt-20 sr-right">
             <div class="w-full md:w-100 h-90">
-                <img src="assets/images/hero_image.svg" alt="hero image" class="object-cover h-full" srcset="" />
+                <img src="assets/images/hero_image.webp" alt="hero image" class="object-cover h-full" srcset="" />
             </div>
         </div>
 
@@ -465,227 +478,404 @@
             </div>
         </div>
 
-        <div class="grid sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
-            <!-- Card 1 -->
-            <div
-                class="w-full max-w-150 border-b-6 border-t-2 border-x-2 border-gray-800 rounded-4xl p-8 flex flex-col justify-between min-h-60 relative overflow-hidden shadow-xl sr-bottom">
-                <div class="relative z-10 md:max-w-[65%] max-w-[55%]">
-                    <h2 class="text-[20px] font-bold leading-tight">
-                        <span class="box-decoration-clone bg-[#ffdc59] text-gray-800 px-2.5 py-0.5 rounded-sm">
-                            Psikotes & Assessment Kompetensi Pegawai
-                        </span>
-                    </h2>
-                </div>
+        <div class="grid sm:grid-cols-4 grid-cols-1 gap-8 items-stretch justify-center">
+            <div class="group relative w-full h-full">
+                <div
+                    class="relative overflow-hidden rounded-2xl p-[1px] shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[#ffdc59]/25 h-full">
+                    <div class="absolute inset-0  opacity-20"></div>
 
-                <div class="relative mt-12">
-                    <a href="#" class="inline-flex items-center gap-3 group">
-                        <div
-                            class="transition-all group-hover:rotate-45 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 ease-in-out duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                <polyline points="7 7 17 7 17 17"></polyline>
-                            </svg>
+                    <div class="relative rounded-2xl p-6 flex flex-col h-full">
+
+                        <div class="relative">
+                            <h3 class="text-lg font-extrabold uppercase tracking-wider text-gray-800">
+                                Psikotes & Assessment Kompetensi Pegawai
+                            </h3>
+                            <p class="mt-2 text-sm text-gray-500">
+                                Layanan asesmen psikologi dan uji kompetensi untuk seleksi serta pengembangan karyawan
+                                di perusahaan.
+                            </p>
                         </div>
-                        <span
-                            class="text-gray-800 group-hover:font-bold transition-colors text-sm font-semibold tracking-wide">
-                            Pelajari Selengkapnya
-                        </span>
-                    </a>
+
+                        <div class="relative mt-6 space-y-4 flex-1">
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Psikotes Terstandar</p>
+                                    <p class="text-xs text-gray-500">Alat ukur psikologi yang valid & reliabel</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Laporan Kompetensi</p>
+                                    <p class="text-xs text-gray-500">Laporan mendalam tiap individu</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Seleksi Karyawan</p>
+                                    <p class="text-xs text-gray-500">Bantu proses rekrutmen lebih objektif</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Konsultasi Hasil</p>
+                                    <p class="text-xs text-gray-500">Diskusi hasil tes bersama psikolog</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative mt-8">
+                            <button
+                                class="group/btn relative w-full overflow-hidden rounded-xl bg-[#ffdc59] p-px font-semibold text-white cursor-pointer">
+                                <div
+                                    class="relative rounded-xl px-4 py-3 transition-colors group-hover/btn:bg-transparent">
+                                    <span class="relative font-bold flex items-center justify-center gap-2">
+                                        Selengkapnya
+                                        <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                            class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1">
+                                            <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linejoin="round"
+                                                stroke-linecap="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="group relative w-full h-full">
+                <div
+                    class="relative overflow-hidden rounded-2xl p-[1px] shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[#ffdc59]/25 h-full">
+                    <div class="absolute inset-0  opacity-20"></div>
 
-                <div class="absolute right-6 top-1/2 -translate-y-1/2 w-[160px] pointer-events-none select-none">
-                    <svg class="drop-shadow-md" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="5" y="15" width="110" height="65" rx="4" fill="white" />
-                        <path d="M5 19C5 16.7909 6.79086 15 9 15H111C113.209 15 115 16.7909 115 19V25H5V19Z"
-                            fill="#f3f4f6" />
-                        <circle cx="12" cy="20" r="1.5" fill="#d1d5db" />
-                        <circle cx="18" cy="20" r="1.5" fill="#d1d5db" />
-                        <circle cx="24" cy="20" r="1.5" fill="#d1d5db" />
+                    <div class="relative rounded-2xl p-6 flex flex-col h-full">
 
-                        <!-- Assessment/Checklist Icon -->
-                        <rect x="75" y="35" width="24" height="32" rx="2" stroke="#d1d5db" stroke-width="1.5"
-                            fill="none" />
-                        <path d="M82 45 h 10 M82 52 h 10" stroke="#d1d5db" stroke-width="1.5" stroke-linecap="round" />
-                        <path d="M78 45 l 1 1 l 2 -2 M78 52 l 1 1 l 2 -2" stroke="#4b5563" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
+                        <div class="relative">
+                            <h3 class="text-lg font-extrabold uppercase tracking-wider text-gray-800">
+                                Talent Test Persiapan Karier & Jurusan Sekolah
+                            </h3>
+                            <p class="mt-2 text-sm text-gray-500">
+                                Tes minat dan bakat untuk membantu pemilihan karier yang tepat dan jurusan sekolah yang
+                                sesuai.
+                            </p>
+                        </div>
 
-                        <!-- Cursor Element -->
-                        <path d="M42 37 L39 34 M50 35 L52 32 M35 44 L32 43 M37 53 L34 56" stroke="#d1d5db"
-                            stroke-width="1.5" stroke-linecap="round" />
-                        <path d="M42 40 L52 65 L57 56 L67 66 L71 62 L61 52 L70 48 Z" fill="#1c1c1c" stroke="white"
-                            stroke-width="1.5" stroke-linejoin="round" />
-                    </svg>
+                        <div class="relative mt-6 space-y-4 flex-1">
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Tes Minat & Bakat</p>
+                                    <p class="text-xs text-gray-500">Temukan potensi terbaik diri Anda</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Rekomendasi Jurusan</p>
+                                    <p class="text-xs text-gray-500">Saran jurusan berdasarkan profil Anda</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Perencanaan Karier</p>
+                                    <p class="text-xs text-gray-500">Panduan jalur karier yang terstruktur</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Konsultasi Psikolog</p>
+                                    <p class="text-xs text-gray-500">Bimbingan langsung dari psikolog berpengalaman</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative mt-8">
+                            <button
+                                class="group/btn relative w-full overflow-hidden rounded-xl bg-[#ffdc59] p-px font-semibold text-white cursor-pointer">
+                                <div
+                                    class="relative rounded-xl px-4 py-3 transition-colors group-hover/btn:bg-transparent">
+                                    <span class="relative font-bold flex items-center justify-center gap-2">
+                                        Selengkapnya
+                                        <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                            class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1">
+                                            <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linejoin="round"
+                                                stroke-linecap="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group relative w-full h-full">
+                <div
+                    class="relative overflow-hidden rounded-2xl p-[1px] shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[#ffdc59]/25 h-full">
+                    <div class="absolute inset-0  opacity-20"></div>
+
+                    <div class="relative rounded-2xl p-6 flex flex-col h-full">
+
+                        <div class="relative">
+                            <h3 class="text-lg font-extrabold uppercase tracking-wider text-gray-800">
+                                Program Pelatihan & Pembimbingan Dunia Kerja / Sekolah
+                            </h3>
+                            <p class="mt-2 text-sm text-gray-500">
+                                Program pelatihan soft skill dan bimbingan kesiapan memasuki dunia kerja maupun
+                                lingkungan sekolah.
+                            </p>
+                        </div>
+
+                        <div class="relative mt-6 space-y-4 flex-1">
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Pelatihan Soft Skill</p>
+                                    <p class="text-xs text-gray-500">Komunikasi, leadership & teamwork</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Bimbingan Karier</p>
+                                    <p class="text-xs text-gray-500">Siap kerja dengan percaya diri</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Adaptasi Lingkungan</p>
+                                    <p class="text-xs text-gray-500">Bantu penyesuaian di sekolah & kampus</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Modul Terstruktur</p>
+                                    <p class="text-xs text-gray-500">Materi pelatihan praktis & terukur</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative mt-8">
+                            <button
+                                class="group/btn relative w-full overflow-hidden rounded-xl bg-[#ffdc59] p-px font-semibold text-white cursor-pointer">
+                                <div
+                                    class="relative rounded-xl px-4 py-3 transition-colors group-hover/btn:bg-transparent">
+                                    <span class="relative font-bold flex items-center justify-center gap-2">
+                                        Selengkapnya
+                                        <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                            class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1">
+                                            <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linejoin="round"
+                                                stroke-linecap="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group relative w-full h-full">
+                <div
+                    class="relative overflow-hidden rounded-2xl p-[1px] shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-[#ffdc59]/25 h-full">
+                    <div class="absolute inset-0  opacity-20"></div>
+
+                    <div class="relative rounded-2xl p-6 flex flex-col h-full">
+
+                        <div class="relative">
+                            <h3 class="text-lg font-extrabold uppercase tracking-wider text-gray-800">
+                                Tes Potensi Akademik (TPA) Persiapan Perguruan Tinggi, CPNS & Kedinasan
+                            </h3>
+                            <p class="mt-2 text-sm text-gray-500">
+                                Persiapan TPA untuk seleksi perguruan tinggi, CPNS, dan ujian masuk sekolah kedinasan.
+                            </p>
+                        </div>
+
+                        <div class="relative mt-6 space-y-4 flex-1">
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Simulasi TPA</p>
+                                    <p class="text-xs text-gray-500">Latihan soal sesuai standar ujian nasional</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Analisis Kemampuan</p>
+                                    <p class="text-xs text-gray-500">Peta kekuatan & area yang perlu ditingkatkan</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Target CPNS & PTN</p>
+                                    <p class="text-xs text-gray-500">Strategi khusus lulus seleksi kedinasan</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffdc59]/10">
+                                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                        class="h-4 w-4 text-[#ffdc59]">
+                                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linejoin="round"
+                                            stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-[#ffdc59]">Bimbingan Intensif</p>
+                                    <p class="text-xs text-gray-500">Pendampingan penuh menuju kelulusan seleksi</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative mt-8">
+                            <button
+                                class="group/btn relative w-full overflow-hidden rounded-xl bg-[#ffdc59] p-px font-semibold text-white cursor-pointer">
+                                <div
+                                    class="relative rounded-xl px-4 py-3 transition-colors group-hover/btn:bg-transparent">
+                                    <span class="relative font-bold flex items-center justify-center gap-2">
+                                        Selengkapnya
+                                        <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                            class="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1">
+                                            <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="2" stroke-linejoin="round"
+                                                stroke-linecap="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div
-                class="w-full max-w-150 border-b-6 border-t-2 border-x-2 border border-gray-800 rounded-4xl p-8 flex flex-col justify-between min-h-60 relative overflow-hidden shadow-xl sr-bottom">
-                <div class="relative z-10 max-w-[55%]">
-                    <h2 class="text-[20px] font-bold leading-tight">
-                        <span class="box-decoration-clone bg-[#ffdc59] text-gray-800 px-2.5 py-0.5 rounded-sm">
-                            Talent Test Persiapan Karier & Jurusan Sekolah
-                        </span>
-                    </h2>
-                </div>
 
-                <div class="relative mt-12">
-                    <a href="#" class="inline-flex items-center gap-3 group">
-                        <div
-                            class="transition-all group-hover:rotate-45 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 ease-in-out duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                <polyline points="7 7 17 7 17 17"></polyline>
-                            </svg>
-                        </div>
-                        <span
-                            class="text-gray-800 group-hover:font-bold transition-colors text-sm font-semibold tracking-wide">
-                            Pelajari Selengkapnya
-                        </span>
-                    </a>
-                </div>
-
-                <div class="absolute right-6 top-1/2 -translate-y-1/2 w-[160px] pointer-events-none select-none">
-                    <svg class="drop-shadow-md" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="5" y="15" width="110" height="65" rx="4" fill="white" />
-                        <path d="M5 19C5 16.7909 6.79086 15 9 15H111C113.209 15 115 16.7909 115 19V25H5V19Z"
-                            fill="#f3f4f6" />
-                        <circle cx="12" cy="20" r="1.5" fill="#d1d5db" />
-                        <circle cx="18" cy="20" r="1.5" fill="#d1d5db" />
-                        <circle cx="24" cy="20" r="1.5" fill="#d1d5db" />
-
-                        <!-- Strategy Pawn Icon -->
-                        <path d="M87 37 a 5 5 0 1 0 0 10 a 5 5 0 1 0 0 -10" stroke="#4b5563" stroke-width="1.5"
-                            fill="none" />
-                        <path d="M84 47 l -4 14 h 14 l -4 -14" stroke="#d1d5db" stroke-width="1.5" fill="none"
-                            stroke-linejoin="round" />
-                        <path d="M76 61 h 22" stroke="#4b5563" stroke-width="1.5" stroke-linecap="round" />
-
-                        <!-- Cursor Element -->
-                        <path d="M42 37 L39 34 M50 35 L52 32 M35 44 L32 43 M37 53 L34 56" stroke="#d1d5db"
-                            stroke-width="1.5" stroke-linecap="round" />
-                        <path d="M42 40 L52 65 L57 56 L67 66 L71 62 L61 52 L70 48 Z" fill="#1c1c1c" stroke="white"
-                            stroke-width="1.5" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div
-                class="w-full max-w-150 border-b-6 border-t-2 border-x-2 border border-gray-800 rounded-4xl p-8 flex flex-col justify-between min-h-60 relative overflow-hidden shadow-xl sr-bottom">
-                <div class="relative z-10 max-w-[55%]">
-                    <h2 class="text-[20px] font-bold leading-tight">
-                        <span class="box-decoration-clone bg-[#ffdc59] text-gray-800 px-2.5 py-0.5 rounded-sm">
-                            Program Pelatihan & Pembimbingan Dunia Kerja / Sekolah
-                        </span>
-                    </h2>
-                </div>
-
-                <div class="relative mt-12">
-                    <a href="#" class="inline-flex items-center gap-3 group">
-                        <div
-                            class="transition-all group-hover:rotate-45 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 ease-in-out duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                <polyline points="7 7 17 7 17 17"></polyline>
-                            </svg>
-                        </div>
-                        <span
-                            class="text-gray-800 group-hover:font-bold transition-colors text-sm font-semibold tracking-wide">
-                            Pelajari Selengkapnya
-                        </span>
-                    </a>
-                </div>
-
-                <div class="absolute right-6 top-1/2 -translate-y-1/2 w-[160px] pointer-events-none select-none">
-                    <svg class="drop-shadow-md" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="5" y="15" width="110" height="65" rx="4" fill="white" />
-                        <path d="M5 19C5 16.7909 6.79086 15 9 15H111C113.209 15 115 16.7909 115 19V25H5V19Z"
-                            fill="#f3f4f6" />
-                        <circle cx="12" cy="20" r="1.5" fill="#d1d5db" />
-                        <circle cx="18" cy="20" r="1.5" fill="#d1d5db" />
-                        <circle cx="24" cy="20" r="1.5" fill="#d1d5db" />
-
-                        <!-- Growth Chart Icon -->
-                        <rect x="75" y="52" width="6" height="12" rx="1" fill="#d1d5db" />
-                        <rect x="85" y="42" width="6" height="22" rx="1" fill="#9ca3af" />
-                        <rect x="95" y="32" width="6" height="32" rx="1" fill="#4b5563" />
-                        <path d="M72 48 L85 35 L95 40 L105 28" stroke="#10b981" stroke-width="1.5" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M100 28 h 5 v 5" stroke="#10b981" stroke-width="1.5" fill="none" stroke-linecap="round"
-                            stroke-linejoin="round" />
-
-                        <!-- Cursor Element -->
-                        <path d="M42 37 L39 34 M50 35 L52 32 M35 44 L32 43 M37 53 L34 56" stroke="#d1d5db"
-                            stroke-width="1.5" stroke-linecap="round" />
-                        <path d="M42 40 L52 65 L57 56 L67 66 L71 62 L61 52 L70 48 Z" fill="#1c1c1c" stroke="white"
-                            stroke-width="1.5" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div
-                class="w-full max-w-150 border-b-6 border-t-2 border-x-2 border-gray-800 rounded-4xl p-8 flex flex-col justify-between min-h-60 relative overflow-hidden shadow-xl sr-bottom">
-                <div class="relative z-10 max-w-[55%] md:max-w-[65%]">
-                    <h2 class="text-[20px] font-bold leading-tight">
-                        <span class="box-decoration-clone bg-[#ffdc59] text-gray-800 px-2.5 py-0.5 rounded-sm">
-                            Tes Potensi Akademik (TPA) Persiapan Perguruan Tinggi, CPNS &
-                            Kedinasan
-                        </span>
-                    </h2>
-                </div>
-
-                <div class="relative mt-12">
-                    <a href="#" class="inline-flex items-center gap-3 group">
-                        <div
-                            class="transition-all group-hover:rotate-45 bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 ease-in-out duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                <polyline points="7 7 17 7 17 17"></polyline>
-                            </svg>
-                        </div>
-                        <span
-                            class="text-gray-800 group-hover:font-bold transition-colors text-sm font-semibold tracking-wide">
-                            Pelajari Selengkapnya
-                        </span>
-                    </a>
-                </div>
-
-                <div class="absolute right-6 top-1/2 -translate-y-1/2 w-[160px] pointer-events-none select-none">
-                    <svg class="drop-shadow-md" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="5" y="15" width="110" height="65" rx="4" fill="white" />
-                        <path d="M5 19C5 16.7909 6.79086 15 9 15H111C113.209 15 115 16.7909 115 19V25H5V19Z"
-                            fill="#f3f4f6" />
-                        <circle cx="12" cy="20" r="1.5" fill="#d1d5db" />
-                        <circle cx="18" cy="20" r="1.5" fill="#d1d5db" />
-                        <circle cx="24" cy="20" r="1.5" fill="#d1d5db" />
-
-                        <!-- Graduation Cap Icon -->
-                        <path d="M72 42 l 16 -8 l 16 8 l -16 8 z" stroke="#4b5563" stroke-width="1.5" fill="none"
-                            stroke-linejoin="round" />
-                        <path d="M78 45 v 8 c 0 5 20 5 20 0 v -8" stroke="#d1d5db" stroke-width="1.5" fill="none" />
-                        <path d="M104 42 v 12" stroke="#4b5563" stroke-width="1.5" fill="none" />
-                        <circle cx="104" cy="55" r="1.5" fill="#4b5563" />
-
-                        <!-- Cursor Element -->
-                        <path d="M42 37 L39 34 M50 35 L52 32 M35 44 L32 43 M37 53 L34 56" stroke="#d1d5db"
-                            stroke-width="1.5" stroke-linecap="round" />
-                        <path d="M42 40 L52 65 L57 56 L67 66 L71 62 L61 52 L70 48 Z" fill="#1c1c1c" stroke="white"
-                            stroke-width="1.5" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
         </div>
     </div>
+
+
 
     <!-- Our Clients Section -->
     <section class="w-full max-w-7xl mx-auto py-24 px-6 md:px-10 font-sans bg-white overflow-hidden">
@@ -1069,12 +1259,24 @@
         </span>
     </a>
 
+
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <!-- SCROLL REVEAL LIBRARY -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script>
+        // --- PAGE LOADER LOGIC ---
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                loader.classList.add('opacity-0');
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500); // match transition duration
+            }
+        });
+
         document.addEventListener("DOMContentLoaded", function () {
             const track = document.getElementById("marquee-track");
             // Only clone if it exists to prevent errors
